@@ -11,7 +11,7 @@
                         in="SourceGraphic" />
             </filter>
             <g id="face" :fill="$state.avatarFaceFill" :stroke="$state.avatarFaceBorder">
-                <circle cx="50" cy="50" :r="$state.avatarFaceSize"/>
+                <circle :cx="$state.avatarFacePositionX" :cy="$state.avatarFacePositionY" :r="$state.avatarFaceSize"/>
             </g>
             <g id="eyes" :fill="$state.avatarEyeFill" :stroke="$state.avatarEyeBorder" :stroke-width="$state.avatarEyeBorderSize">
                 <circle :cx="$state.avatarEyePositionLX" :cy="$state.avatarEyePositionLY" :r="$state.avatarEyeSize" />

@@ -1,0 +1,23 @@
+{
+  "AvatarContainer": {
+    "description": "Auto imported from components/AvatarContainer.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/Sidebar.vue"
+  },
+  "SidebarEyes": {
+    "description": "Auto imported from components/SidebarEyes.vue"
+  },
+  "SidebarFace": {
+    "description": "Auto imported from components/SidebarFace.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  }
+}
