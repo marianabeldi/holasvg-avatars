@@ -48,33 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-aside {
-    background-color: var(--siteYellow);
-    border: 1px solid;
-    flex: 1;
-    text-align: left;
-}
-.side-box {
-    border: 1px solid;
-    background-color: rgba(255 255 255 / 15%);
-    margin: 1rem;
-    padding: 1rem;
-    h3 {margin-top: 0; }
-}
-input[type="color"] {
-    aspect-ratio: 1;
-    background: transparent;
-    border: none;
-    height: 1.8rem;
-    padding: 0;
-    width: 1.8rem;
-}
-input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-	border: none;
-}
-.side-box-colors {}
+
 
 </style>

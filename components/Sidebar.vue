@@ -1,24 +1,18 @@
 <template>
     <aside class="main-aside">
-        <button class="btn">I'm feeling lucky</button>
+        <button class="btn" @click="randomColors">I'm feeling lucky</button>
         <div class="side-box">
-            <div class="side-box-colors">
-                <h3>Colors</h3>
+            <h3>General</h3>
+            <div class="side-box-option">
                 <label for="bg">Background Color</label>
                 <input type="color" id="bg" name="bg" v-model="$state.valueBgColor" @input="changeBgColor"/>
-                <label for="stroke">Borders</label>
-                <input type="color" id="stroke" name="stroke" v-model="$state.valueBorderColor" @input="changeBorderColor"/>
+                <!-- <label for="stroke">Borders</label>
+                <input type="color" id="stroke" name="stroke" v-model="$state.valueFaceBorder" @input="changeBorderColor"/>
                 <label for="face">Face</label>
-                <input type="color" id="face" name="face" v-model="$state.valueFaceFill" @input="changeFaceColor"/>
+                <input type="color" id="face" name="face" v-model="$state.valueFaceFill" @input="changeFaceFill"/>
                 <label for="eyes">Eyes</label>
-                <input type="color" id="eyes" name="eyes" v-model="$state.valueEyesFill" @input="changeEyesColor"/>
-                <label for="stroke">Mouth</label>
-                <input type="color" id="mouth" name="mouth" v-model="$state.valueMouthFill" @input="changeMouthColor"/>
-                <button @click="randomColors">Random palette</button>
+                <input type="color" id="eyes" name="eyes" v-model="$state.valueEyesFill" @input="changeEyeFill"/> -->
             </div>
-
-            <label>Move face</label>
-
         </div>
         <SidebarFace/>
         <SidebarEyes/>
@@ -33,13 +27,16 @@ export default {
             this.$state.avatarBgColor = this.$state.valueBgColor
         },
         changeBorderColor() {
-            this.$state.avatarBorderColor = this.$state.valueBorderColor
+            this.$state.avatarFaceBorder = this.$state.valueFaceBorder
         },
-        changeMouthColor() {
-            this.$state.avatarMouthFill = this.$state.valueMouthFill
+        changeEyeFill() {
+            this.$state.avatarEyeFill = this.$state.valueEyeFill
+        },
+        changeFaceFill() {
+            this.$state.avatarFaceFill = this.$state.valueFaceFill
         },
         randomColors() {
-            const propsarray = ['valueBgColor', 'avatarBgColor', 'avatarFaceStroke', 'avatarFaceFill', 'avatarEyeFill', 'avatarEyeBorder', 'avatarMouthFill' ]
+            const propsarray = ['valueBgColor', 'avatarBgColor', 'avatarFaceBorder', 'avatarFaceFill', 'avatarEyeFill', 'avatarEyeBorder', 'avatarMouthFill' ]
             for (let i = 0; i < propsarray.length; i++) {
                this.randomItem(propsarray[i])
             }
@@ -52,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .main-aside {
     background-color: var(--siteYellow);
     border: 1px solid;
@@ -62,10 +59,24 @@ export default {
 .side-box {
     border: 1px solid;
     background-color: rgba(255 255 255 / 15%);
-    margin: 1rem;
+    margin: 1rem 1rem 2rem;
     padding: 1rem;
-    h3 {margin-top: 0; }
+    > h3 {
+        background-color: var(--siteYellow);
+        margin-top: -1.7rem; 
+        padding: 0 .4rem;
+        width: max-content;
+    }
 }
+.side-box-option {
+    align-items: center;
+    display: flex;
+    margin-block-end: .5rem;
+    label {
+        margin-right: .5rem;
+    }
+}
+
 input[type="color"] {
     aspect-ratio: 1;
     background: transparent;
@@ -80,6 +91,20 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
-.side-box-colors {}
+
+input[type="range"] {
+  border: solid 2px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
+  transition: background 450ms ease-in;
+}
+input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: var(--textColor);
+}
 
 </style>

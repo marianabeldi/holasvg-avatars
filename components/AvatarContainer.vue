@@ -1,6 +1,6 @@
 <template>
     <section class="main-avatar">
-        <svg id="avatar" viewBox="0 0 100 100" width="600" height="600" fill="" :style="{backgroundColor: $state.avatarBgColor}">
+        <svg id="avatar" viewBox="0 0 100 100" fill="" :style="{backgroundColor: $state.avatarBgColor}">
             <filter id="scribble">
             <feTurbulence type="fractalNoise"
                     baseFrequency="0.02"
@@ -22,16 +22,19 @@
             </g>
         </svg>
         <div>
-            <button>CSS</button>
-            <button>SVG</button>
-            <button>Codepen</button>
+            <button class="btn">CSS</button>
+            <button class="btn">SVG</button>
+            <button class="btn">Codepen</button>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .main-avatar {
+    background-color: var(--siteYellow);
     border: 1px solid;
+    display: grid;
+    grid-template-rows: 1fr auto;
     flex: 1;
 }
 #avatar {

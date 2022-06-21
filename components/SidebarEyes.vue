@@ -1,6 +1,5 @@
 <template>
         <div class="side-box">
-            <input type="checkbox"/>
             <h3>Eyes</h3>
             <div class="side-box-option">
                 <label for="eyeFill">Fill</label>
@@ -12,15 +11,15 @@
             </div>
             <div class="side-box-option">
                 <label for="eyeBorderSize">Border Width</label>
-                <input type="range" id="eyeBorderSize" name="eyeBorderSize" v-model="$state.valueEyeBorderSize" @input="changeEyeBorderSize"/>
+                <input type="range" id="eyeBorderSize" name="eyeBorderSize" value='2' min="0" max="100" v-model="$state.valueEyeBorderSize" @input="changeEyeBorderSize"/>
             </div>
             <div class="side-box-option">
                 <label for="eyeSize">Size</label>
-                <input type="range" id="eyeSize" name="eyeSize" v-model="$state.valueEyeSize" @input="changeEyeSize"/>
+                <input type="range" id="eyeSize" name="eyeSize" value='4' min="0" max="100" v-model="$state.valueEyeSize" @input="changeEyeSize"/>
             </div>
             <div class="side-box-option">
                 <label for="eyePositionLX">Position Left X</label>
-                <input type="range" id="eyePositionLX" name="eyePositionLX" v-model="$state.valueEyePositionLX" @input="changeEyePositionLX"/>
+                <input type="range" id="eyePositionLX" name="eyePositionLX" value='65' min="-50" max="150" v-model="$state.valueEyePositionLX" @input="changeEyePositionLX"/>
             </div>
             <div class="side-box-option">
                 <label for="eyePositionLY">Position Left Y</label>
@@ -70,33 +69,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-aside {
-    background-color: var(--siteYellow);
-    border: 1px solid;
-    flex: 1;
-    text-align: left;
-}
-.side-box {
-    border: 1px solid;
-    background-color: rgba(255 255 255 / 15%);
-    margin: 1rem;
-    padding: 1rem;
-    h3 {margin-top: 0; }
-}
-input[type="color"] {
-    aspect-ratio: 1;
-    background: transparent;
-    border: none;
-    height: 1.8rem;
-    padding: 0;
-    width: 1.8rem;
-}
-input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-	border: none;
-}
-.side-box-colors {}
+
 
 </style>

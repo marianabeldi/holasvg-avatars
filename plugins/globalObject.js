@@ -4,12 +4,6 @@ import Vue from 'vue'
 const state = {
     valueBgColor: "#223300",
     avatarBgColor: "#223300",
-    // valueFaceStroke: "#000000",
-    // avatarFaceStroke: "#000000",
-    valueEyeFill: "#000000",
-    avatarEyeFill: "#000000",
-    // valueEyesStroke: "#000000",
-    // avatarEyesStroke: "#000000",
     valueMouthFill: "none",
     avatarMouthFill: "none",
     // valueMouthStroke: "#000000",
