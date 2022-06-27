@@ -12,4 +12,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Sidebar>` | `<sidebar>` (components/Sidebar.vue)
 - `<SidebarEyes>` | `<sidebar-eyes>` (components/SidebarEyes.vue)
 - `<SidebarFace>` | `<sidebar-face>` (components/SidebarFace.vue)
+- `<SidebarMouth>` | `<sidebar-mouth>` (components/SidebarMouth.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)

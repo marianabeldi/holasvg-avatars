@@ -3,23 +3,23 @@
             <h3>Face</h3>
             <div class="side-box-option">
                 <label for="faceFill">Fill</label>
-                <input type="color" id="faceFill" name="faceFill" v-model="$state.valueFaceFill" @input="changeFaceFill"/>
+                <input type="color" id="faceFill" name="faceFill" v-model="$state.colorValues.faceFill"/>
             </div>
             <div class="side-box-option">
                 <label for="faceBorder">Border</label>
-                <input type="color" id="faceBorder" name="faceBorder" v-model="$state.valueFaceBorder" @input="changeFaceBorder"/>
+                <input type="color" id="faceBorder" name="faceBorder" v-model="$state.colorValues.faceBorder"/>
             </div>
             <div class="side-box-option">
                 <label for="faceSize">Size</label>
-                <input type="range" id="faceSize" name="faceSize" v-model="$state.valueFaceSize" @input="changeFaceSize"/>
+                <input type="range" id="faceSize" name="faceSize" min="0" max="100" v-model="$state.numberValues.faceSize.value"/>
             </div>
             <div class="side-box-option">
                 <label for="facePositionX">Position X</label>
-                <input type="range" id="facePositionX" name="facePositionX" v-model="$state.valueFacePositionX" @input="changeFacePositionX"/>
+                <input type="range" id="facePositionX" name="facePositionX" min="-50" max="150" v-model="$state.numberValues.facePositionX.value"/>
             </div>
             <div class="side-box-option">
                 <label for="facePositionX">Position Y</label>
-                <input type="range" id="facePositionY" name="facePositionY" v-model="$state.valueFacePositionY" @input="changeFacePositionY"/>
+                <input type="range" id="facePositionY" name="facePositionY" min="-50" max="150" v-model="$state.numberValues.facePositionY.value"/>
             </div>
         </div>
 </template>
@@ -28,21 +28,6 @@
 <script>
 export default {
     methods: {
-        changeFaceFill() {
-            this.$state.avatarFaceFill = this.$state.valueFaceFill
-        },
-        changeFaceBorder() {
-            this.$state.avatarFaceBorder = this.$state.valueFaceBorder
-        },
-        changeFaceSize() {
-            this.$state.avatarFaceSize = this.$state.valueFaceSize
-        },
-        changeFacePositionX() {
-            this.$state.avatarFacePositionX = this.$state.valueFacePositionX
-        },
-        changeFacePositionY() {
-            this.$state.avatarFacePositionY = this.$state.valueFacePositionY
-        },
     }
 }
 </script>

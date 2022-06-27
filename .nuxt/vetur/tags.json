@@ -17,6 +17,9 @@
   "SidebarFace": {
     "description": "Auto imported from components/SidebarFace.vue"
   },
+  "SidebarMouth": {
+    "description": "Auto imported from components/SidebarMouth.vue"
+  },
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   }

@@ -1,10 +1,11 @@
-export { default as AvatarContainer } from '../../components/AvatarContainer.vue'
-export { default as Footer } from '../../components/Footer.vue'
-export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
-export { default as Sidebar } from '../../components/Sidebar.vue'
-export { default as SidebarEyes } from '../../components/SidebarEyes.vue'
-export { default as SidebarFace } from '../../components/SidebarFace.vue'
-export { default as Tutorial } from '../../components/Tutorial.vue'
+export const AvatarContainer = () => import('../../components/AvatarContainer.vue' /* webpackChunkName: "components/avatar-container" */).then(c => wrapFunctional(c.default || c))
+export const Footer = () => import('../../components/Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
+export const NuxtLogo = () => import('../../components/NuxtLogo.vue' /* webpackChunkName: "components/nuxt-logo" */).then(c => wrapFunctional(c.default || c))
+export const Sidebar = () => import('../../components/Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
+export const SidebarEyes = () => import('../../components/SidebarEyes.vue' /* webpackChunkName: "components/sidebar-eyes" */).then(c => wrapFunctional(c.default || c))
+export const SidebarFace = () => import('../../components/SidebarFace.vue' /* webpackChunkName: "components/sidebar-face" */).then(c => wrapFunctional(c.default || c))
+export const SidebarMouth = () => import('../../components/SidebarMouth.vue' /* webpackChunkName: "components/sidebar-mouth" */).then(c => wrapFunctional(c.default || c))
+export const Tutorial = () => import('../../components/Tutorial.vue' /* webpackChunkName: "components/tutorial" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

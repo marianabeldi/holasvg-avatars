@@ -132,7 +132,8 @@ a { transition: all .2s; }
   padding: .8rem 1.6rem;
   &:hover {
     cursor: pointer;
-    opacity: .8;
+    background-color: var(--textColor);
+    color: var(--siteRed);
   }
 }
 .highlight {

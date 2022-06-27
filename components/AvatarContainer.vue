@@ -1,6 +1,6 @@
 <template>
     <section class="main-avatar">
-        <svg id="avatar" viewBox="0 0 100 100" fill="" :style="{backgroundColor: $state.avatarBgColor}">
+        <svg id="avatar" :class="{ 'animationOn' : $state.isChecked }" viewBox="0 0 100 100" fill="" :style="{backgroundColor: $state.colorValues.bgColor}">
             <filter id="scribble">
             <feTurbulence type="fractalNoise"
                     baseFrequency="0.02"
@@ -10,15 +10,15 @@
             <feDisplacementMap scale="3"
                         in="SourceGraphic" />
             </filter>
-            <g id="face" :fill="$state.avatarFaceFill" :stroke="$state.avatarFaceBorder">
-                <circle :cx="$state.avatarFacePositionX" :cy="$state.avatarFacePositionY" :r="$state.avatarFaceSize"/>
+            <g id="face" :fill="$state.colorValues.faceFill" :stroke="$state.colorValues.faceBorder">
+                <circle :cx="$state.numberValues.facePositionX.value" :cy="$state.numberValues.facePositionY.value" :r="$state.numberValues.faceSize.value"/>
             </g>
-            <g id="eyes" :fill="$state.avatarEyeFill" :stroke="$state.avatarEyeBorder" :stroke-width="$state.avatarEyeBorderSize">
-                <circle :cx="$state.avatarEyePositionLX" :cy="$state.avatarEyePositionLY" :r="$state.avatarEyeSize" />
-                <circle :cx="$state.avatarEyePositionRX" :cy="$state.avatarEyePositionRY" :r="$state.avatarEyeSize" />
+            <g id="eyes" :fill="$state.colorValues.eyeFill" :stroke="$state.colorValues.eyeBorder" :stroke-width="$state.numberValues.eyeBorderSize.value">
+                <circle :cx="$state.numberValues.eyePositionLX.value" :cy="$state.numberValues.eyePositionLY.value" :r="$state.numberValues.eyeSize.value" />
+                <circle :cx="$state.numberValues.eyePositionRX.value" :cy="$state.numberValues.eyePositionRY.value" :r="$state.numberValues.eyeSize.value" />
             </g>
-            <g id="mouth" :fill="$state.avatarMouthFill" :stroke="$state.avatarFaceBorder">
-                <line x1="40" x2="60" y1="60" y2="60"/>
+            <g id="mouth" :fill="$state.colorValues.mouthFill" :stroke="$state.colorValues.faceBorder">
+                <line x1="40" :x2="$state.numberValues.mouthSize.value" :y1="$state.numberValues.mouthPositionY.value" :y2="$state.numberValues.mouthPositionY.value" :transform="`translate(${$state.numberValues.mouthPositionX.value} 0)`"/>
             </g>
         </svg>
         <div>
@@ -38,6 +38,11 @@
     flex: 1;
 }
 #avatar {
+    max-height: 610px;
+    object-fit: cover;
+    width: 100%;
+}
+.animationOn {
     filter: url(#scribble);
 }
 
