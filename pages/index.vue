@@ -51,23 +51,27 @@ export default {
   --stripedColor: rgba(255,255,255,.7);
   --siteRed: #FF5463;
   --siteRed: #ff6101;
+  --siteRed: #3a3f5b;
 
   --siteOrange: #FF9365;
   --siteOrange: #ffb000;
 
   --siteYellow: #FBD887;
   --siteYellow: #ffb000;
+  --siteYellow: #121525;
 
 // --siteLightblue: #69BBBC;
   --siteLightblue: #84c9d2;
   --siteBlue: #6EBFB5;
   --siteBlue: #00b4c8;
+  --siteBlue: #6b7ba7;
 
   --siteGreen: #9EE6CF;
   --siteGreen: #9EE6CF;
 
   --textColor: #0E1A27;
   --textColor: #29017d;
+  --textColor: #6b7ba7;
 
     --borderColor: #222831;
   // --bgColor: #ffe3d4;
@@ -121,23 +125,23 @@ h1 {
 }
 a { transition: all .2s; }
 .btn {
-  background-color: #FF5463;
+  background-color: var(--siteOrange);
   border: 0;
   border-radius: 4px;
-  color: var(--textColor);
+  color: var(--siteYellow);
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: 600;
   margin: 1rem;
   padding: .8rem 1.6rem;
+  transition: all ease .3s;
   &:hover {
     cursor: pointer;
     background-color: var(--textColor);
-    color: var(--siteRed);
   }
 }
 .highlight {
-  color: var(--siteRed);
+  color: var(--siteOrange);
 }
 .home-link {
   display: block;

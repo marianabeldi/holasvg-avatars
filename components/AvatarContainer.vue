@@ -21,7 +21,7 @@
                 <line x1="40" :x2="$state.numberValues.mouthSize.value" :y1="$state.numberValues.mouthPositionY.value" :y2="$state.numberValues.mouthPositionY.value" :transform="`translate(${$state.numberValues.mouthPositionX.value} 0)`"/>
             </g>
         </svg>
-        <div>
+        <div class="btn-row">
             <button class="btn">CSS</button>
             <button class="btn">SVG</button>
             <button class="btn">Codepen</button>
@@ -44,6 +44,17 @@
 }
 .animationOn {
     filter: url(#scribble);
+}
+.btn-row {
+    display: flex;
+    .btn {
+        background-color: #FF5463;
+        width: 100%;
+        &:hover {
+            background-color: var(--textColor);
+            cursor: pointer;
+        }
+    }
 }
 
 </style>

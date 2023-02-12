@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .main-aside {
-    background-color: var(--siteYellow);
+    background-color: #202540;
     border: 1px solid;
     flex: 1;
     display: grid;
@@ -60,7 +60,7 @@ export default {
 }
 .side-box {
     border: 1px solid;
-    background-color: rgba(255 255 255 / 15%);
+    background-color: var(--siteYellow);
     margin: 1rem 0;
     padding: 1rem;
     > h3 {
