@@ -5,11 +5,11 @@ const state = {
     isChecked: true,
     mouthFill: "none",
     colorValues: {
-        bgColor: "#223300",
+        bgColor: "#202640",
         // mouthBorder: "#000000",
-        faceFill: "#CCCCCC",
-        faceBorder: "#000000",
-        eyeFill: "#000000",
+        faceFill: "#BBBBBB",
+        faceBorder: "#161125",
+        eyeFill: "#161125",
         eyeBorder: "#DDDDDD",
     },
     numberValues: {

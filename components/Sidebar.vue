@@ -8,7 +8,7 @@
                 <input type="color" id="bg" name="bg" v-model="$state.colorValues.bgColor"/>
                 <label class="checkmark-label" for="animation">Animation</label>
                 <input class="checkmark-input" type="checkbox" id="animation" name="animation" @change="$state.isChecked = !$state.isChecked"  :checked="$state.isChecked"/>
-                <svg class="checkmark-bg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1" rx="3" ry="3" ></rect><polyline points="8,17 14,23 25,8" stroke="transparent" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none" class="checkmark"></polyline></svg>
+                <svg class="checkmark-bg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" stroke="#202640" fill="none" stroke-width="1" rx="3" ry="3" ></rect><polyline points="8,17 14,23 25,8" stroke="transparent" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none" class="checkmark"></polyline></svg>
             </div>
         </div>
         <SidebarFace/>
@@ -44,22 +44,25 @@ export default {
 
 <style lang="scss">
 .main-aside {
-    background-color: #202540;
-    border: 1px solid;
+    background-color: var(--bgColor);
+    border: 1px solid var(--borderColor);
     flex: 1;
-    display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     padding: 1rem;
     text-align: left;
+    @media (min-width: 40em) /* 640px */ {
+        display: grid;
+    }
 }
 .btn.btn-lucky {
     grid-column: 1 / 3;
-    margin: 0;
+    margin: 0 0 1rem;
+    width: 100%;
 }
 .side-box {
-    border: 1px solid;
+    border: 1px solid var(--borderColor);
     background-color: var(--siteYellow);
     margin: 1rem 0;
     padding: 1rem;
@@ -74,7 +77,8 @@ export default {
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-block-end: 1rem;
+    margin-block-end: 1.5rem;
+    &:last-child { margin-block-end: .5rem;}
     label {
         margin-right: .5rem;
         text-align: right;
@@ -88,6 +92,8 @@ input[type="color"] {
     aspect-ratio: 1;
     background: transparent;
     border: none;
+    border: 1px solid var(--textColor);
+    border-radius: 4px;
     height: 32px;
     padding: 0;
     width: 32px;
@@ -102,26 +108,28 @@ input[type="color"]::-webkit-color-swatch {
 
 input[type="range"] {
     // border: solid 1px currentColor;
-    border-radius: 8px;
-    height: 16px;
+    border-radius: 10px;
+    height: 12px;
     -webkit-appearance: none;
     outline: none;
     background: none;
 }
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: var(--siteBlue);
-  height: 16px;
+  height: 12px;
+  &:hover, &:focus { background: #465479; }
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    background: var(--textColor);
-    border-radius: 50%;
+    background: var(--siteOrange);
+    border-radius: 2px;
     cursor: ew-resize;
-    margin-top: -3px;
-    width: 22px;
-    height: 22px;
+    margin-top: -8px;
+    width: 12px;
+    height: 28px;
     -webkit-appearance: none;
     vertical-align: middle;
+    &:hover, &:focus { background: #FF5463; }
 }
 
 .checkmark-input {
@@ -137,11 +145,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 input[type="checkbox"]:checked * { transition: all 0.1s linear; }
 input[type="checkbox"]:checked + .checkmark-bg rect, input[type="checkbox"]:hover + .checkmark-bg rect {
-    fill: var(--siteBlue);
+    fill: var(--siteOrange);
 }
 input[type="checkbox"]:checked + .checkmark-bg .checkmark {
     animation: checkdraw .2s ease forwards;
-    stroke: #fff;
+    stroke: var(--siteYellow);
 }
 .checkmark-bg .checkmark {
     stroke-dasharray: 28px;

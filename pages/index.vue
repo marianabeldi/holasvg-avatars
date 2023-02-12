@@ -43,43 +43,30 @@ export default {
 <style lang="scss">
 :root {
   --bgLighter: #fffaf4;
-  --borderColor: #212832;
+  --borderColor: #3b4257;
 
-  --bgColor: #FFF6EC;
-  --bgColor: #ffeddf;
+  --bgColor: #202540;
 
   --stripedColor: rgba(255,255,255,.7);
-  --siteRed: #FF5463;
-  --siteRed: #ff6101;
-  --siteRed: #3a3f5b;
 
-  --siteOrange: #FF9365;
+  --siteRed: #293045;
+
   --siteOrange: #ffb000;
+  --siteOrange: #ff9a8a;
 
-  --siteYellow: #FBD887;
   --siteYellow: #ffb000;
-  --siteYellow: #121525;
+  --siteYellow: #161225;
 
-// --siteLightblue: #69BBBC;
   --siteLightblue: #84c9d2;
-  --siteBlue: #6EBFB5;
-  --siteBlue: #00b4c8;
-  --siteBlue: #6b7ba7;
+
+  --siteBlue: #8899c9;
 
   --siteGreen: #9EE6CF;
-  --siteGreen: #9EE6CF;
 
-  --textColor: #0E1A27;
-  --textColor: #29017d;
-  --textColor: #6b7ba7;
+  --textColor: #ffeae1;
 
-    --borderColor: #222831;
-  // --bgColor: #ffe3d4;
+  --borderColor: #222831;
   --stripedColor: rgba(255,255,255,.7);
-  // --siteRed: #FF5463;
-  // --siteBlue: #24A19C;
-  // --siteGreen: #6EBFB5;
-  // --textColor: #222831;
 }
 html {
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -95,13 +82,11 @@ button, input, textarea, select {
   font: inherit;
 }
 .top {
-  background-color: var(--textColor);
+  background-color: var(--siteBlue);
+  background-color: var(--siteOrange);
   border-bottom: 1px solid var(--borderColor);
   height: .5rem;
   width: 100%;
-  .loaders-page & {
-    background-color: var(--siteLightblue);
-  }
 }
 body {
   background-color: var(--siteYellow);
@@ -147,7 +132,7 @@ a { transition: all .2s; }
   display: block;
   font-size: 1rem;
   a {
-    color: var(--textColor);
+    color: var(--siteBlue);
     transition: color .2s;
     text-decoration: none;
     &:hover {

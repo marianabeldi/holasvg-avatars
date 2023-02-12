@@ -32,13 +32,14 @@
 <style lang="scss" scoped>
 .main-avatar {
     background-color: var(--siteYellow);
-    border: 1px solid;
+    border: 1px solid var(--borderColor);
     display: grid;
     grid-template-rows: 1fr auto;
     flex: 1;
+    min-width: 300px;
 }
 #avatar {
-    max-height: 610px;
+    max-height: 640px;
     object-fit: cover;
     width: 100%;
 }
@@ -47,9 +48,14 @@
 }
 .btn-row {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
     .btn {
         background-color: #FF5463;
-        width: 100%;
+        background-color: var(--siteOrange);
+        flex-grow: 1;
+        margin: 0;
         &:hover {
             background-color: var(--textColor);
             cursor: pointer;
@@ -58,3 +64,11 @@
 }
 
 </style>
+
+<script>
+    export default {
+        methods: {
+
+        }
+    }
+</script>

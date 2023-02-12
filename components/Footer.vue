@@ -31,7 +31,7 @@ footer {
     text-align: left;
     margin: 0;
     a {
-      color: var(--siteBlue);
+      color: var(--siteOrange);
       font-weight: 900;
       text-decoration: none;
       &:hover {
@@ -49,7 +49,7 @@ footer {
       transition: fill .2s;
       width: 2rem;
       &:hover { 
-          fill: var(--siteRed); 
+          fill: var(--siteOrange); 
             .liquid { fill: #FD0;}
         }
     }
