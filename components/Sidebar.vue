@@ -49,7 +49,7 @@ export default {
     flex: 1;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto 1fr;
     padding: 1rem;
     text-align: left;
     @media (min-width: 40em) /* 640px */ {
@@ -58,7 +58,7 @@ export default {
 }
 .btn.btn-lucky {
     grid-column: 1 / 3;
-    margin: 0 0 1rem;
+    margin: 0;
     width: 100%;
 }
 .side-box {

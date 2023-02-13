@@ -2,6 +2,7 @@
 import Vue from 'vue'
 
 const state = {
+    copyText: "Copy",
     isChecked: true,
     mouthFill: "none",
     colorValues: {

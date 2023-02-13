@@ -2278,6 +2278,7 @@ var _nuxt_empty = __webpack_require__(18);
 // plugins/myPlugin.js
 
 const state = {
+  copyText: "Copy",
   isChecked: true,
   mouthFill: "none",
   colorValues: {

@@ -10,12 +10,12 @@
                 <input type="color" id="eyeBorder" name="eyeBorder" v-model="$state.colorValues.eyeBorder"/>
             </div>
             <div class="side-box-option">
-                <label for="eyeBorderSize">Border Width</label>
-                <input type="range" id="eyeBorderSize" name="eyeBorderSize" min="0" max="100" v-model="$state.numberValues.eyeBorderSize.value"/>
-            </div>
-            <div class="side-box-option">
                 <label for="eyeSize">Size</label>
                 <input type="range" id="eyeSize" name="eyeSize" min="0" max="100" v-model="$state.numberValues.eyeSize.value"/>
+            </div>
+            <div class="side-box-option">
+                <label for="eyeBorderSize">Border Width</label>
+                <input type="range" id="eyeBorderSize" name="eyeBorderSize" min="0" max="100" v-model="$state.numberValues.eyeBorderSize.value"/>
             </div>
             <div class="side-box-option">
                 <label for="eyePositionLX">Position Left X</label>
