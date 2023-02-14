@@ -136,7 +136,7 @@ a { transition: all .2s; }
     transition: color .2s;
     text-decoration: none;
     &:hover {
-      color: var(--siteRed);
+      color: var(--siteLightblue);
     }
   }
 }

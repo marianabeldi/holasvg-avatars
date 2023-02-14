@@ -2279,6 +2279,7 @@ var _nuxt_empty = __webpack_require__(18);
 
 const state = {
   copyText: "Copy",
+  codepenvalue: {},
   isChecked: true,
   mouthFill: "none",
   colorValues: {

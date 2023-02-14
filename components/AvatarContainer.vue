@@ -39,7 +39,7 @@
       >
         Download
       </button>
-      <form
+      <form class="btn-form"
         action="https://codepen.io/pen/define"
         method="POST"
         target="_blank"
@@ -65,8 +65,7 @@ export default {
 
       var el = document.getElementById('avatar')
       var avatarCode = new XMLSerializer().serializeToString(el);
-
-
+      // var precode = document.getElementById('avatar').innerHTML
       // var animationOn = this.$state.isChecked
       // var avatarCode = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 100 100"' + ' ' + 'class="' + animationOn + '"' + ' ' + 'style="background-color:' + this.$state.colorValues.bgColor +
       //   '">' +
@@ -100,7 +99,23 @@ export default {
         }
       }
     },
+    loaderURL() {
+      const DOMURL = self.URL || self.webkitURL || self;
+      var svgString;
+        svgString = new XMLSerializer().serializeToString(
+          document.getElementById('avatar')
+        );
+        svgString = svgString
+          .replaceAll(
+            '<viewBox="0 0 100 100" width="640" height="640">',
+            'viewBox="0 0 100 100"'
+          );
 
+      const svg = new Blob([svgString], {
+        type: "image/svg+xml;charset=utf-8",
+      });
+      return DOMURL.createObjectURL(svg);
+    },
     downloadSvg() {
       const link = document.createElement("a");
       link.download = "my-avatar.svg";
@@ -123,7 +138,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .main-avatar {
   background-color: var(--siteYellow);
   border: 1px solid var(--borderColor);
@@ -145,9 +160,10 @@ export default {
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem;
-  .btn {
+  .btn, .btn-form {
     background-color: #ff5463;
     background-color: var(--siteOrange);
+    border-radius: 4px;
     flex-grow: 1;
     margin: 0;
     &:hover {
@@ -155,5 +171,6 @@ export default {
       cursor: pointer;
     }
   }
+  .btn-form .btn { width: 100%; }
 }
 </style>
