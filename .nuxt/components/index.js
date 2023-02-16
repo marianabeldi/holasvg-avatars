@@ -1,6 +1,7 @@
 export const AvatarContainer = () => import('../../components/AvatarContainer.vue' /* webpackChunkName: "components/avatar-container" */).then(c => wrapFunctional(c.default || c))
 export const Footer = () => import('../../components/Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
 export const NuxtLogo = () => import('../../components/NuxtLogo.vue' /* webpackChunkName: "components/nuxt-logo" */).then(c => wrapFunctional(c.default || c))
+export const Share = () => import('../../components/Share.vue' /* webpackChunkName: "components/share" */).then(c => wrapFunctional(c.default || c))
 export const Sidebar = () => import('../../components/Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
 export const SidebarEyes = () => import('../../components/SidebarEyes.vue' /* webpackChunkName: "components/sidebar-eyes" */).then(c => wrapFunctional(c.default || c))
 export const SidebarFace = () => import('../../components/SidebarFace.vue' /* webpackChunkName: "components/sidebar-face" */).then(c => wrapFunctional(c.default || c))

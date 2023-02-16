@@ -6,6 +6,7 @@
       <Sidebar/>
       <AvatarContainer/>
     </main>
+    <Share/>
   <Footer/>
 </div>
 </template>
@@ -23,12 +24,12 @@ export default {
         { property: 'og:url', content: "https://avatars.holasvg.com" },
         { property: 'og:title', content: "Hola SVG Avatars" },
         { property: 'og:description', content: "Free Open SVG Avatars" },
-        { property: 'og:image', content: "/holasvg-icons.gif" },
+        { property: 'og:image', content: "/holasvg-avatars.gif" },
         { property: 'twitter:card', content: "summary_large_image" },
         { property: 'twitter:url', content: "https://avatars.holasvg.com" },
         { property: 'twitter:title', content: "Hola SVG Icons" },
         { property: 'twitter:description', content: "Free Open SVG Avatars" },
-        { property: 'twitter:image', content: "/holasvg-icons.gif" },
+        { property: 'twitter:image', content: "/holasvg-avatars.gif" },
       ],
     };
   },

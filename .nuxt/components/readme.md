@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<AvatarContainer>` | `<avatar-container>` (components/AvatarContainer.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
+- `<Share>` | `<share>` (components/Share.vue)
 - `<Sidebar>` | `<sidebar>` (components/Sidebar.vue)
 - `<SidebarEyes>` | `<sidebar-eyes>` (components/SidebarEyes.vue)
 - `<SidebarFace>` | `<sidebar-face>` (components/SidebarFace.vue)

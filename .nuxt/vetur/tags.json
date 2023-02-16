@@ -8,6 +8,9 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
+  "Share": {
+    "description": "Auto imported from components/Share.vue"
+  },
   "Sidebar": {
     "description": "Auto imported from components/Sidebar.vue"
   },
