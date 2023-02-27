@@ -19,7 +19,8 @@ export default {
       title: 'Hola SVG Avatars',
       meta: [
         { name: 'title', content: "Hola SVG Avatars" },
-        { name: 'description', content: "Free Open SVG Avatars" },
+        { name: 'description', content: "Free Open SVG Avatars Generator" },
+        { name: 'author', content: "Mariana Beldi" },
         { property: 'og:type', content: "website" },
         { property: 'og:url', content: "https://avatars.holasvg.com" },
         { property: 'og:title', content: "Hola SVG Avatars" },
@@ -28,7 +29,7 @@ export default {
         { property: 'twitter:card', content: "summary_large_image" },
         { property: 'twitter:url', content: "https://avatars.holasvg.com" },
         { property: 'twitter:title', content: "Hola SVG Icons" },
-        { property: 'twitter:description', content: "Free Open SVG Avatars" },
+        { property: 'twitter:description', content: "Free Open SVG Avatars Generator" },
         { property: 'twitter:image', content: "/holasvg-avatars.gif" },
       ],
     };

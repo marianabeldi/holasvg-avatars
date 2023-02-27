@@ -861,12 +861,12 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=06b5c132&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=3a52bc1f&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"main-wrapper"},[_vm._ssrNode("<b class=\"top\"></b> <h1><span class=\"home-link\"><a href=\"https://holasvg.com/\">hola svg</a></span>Free Open SVG <span class=\"highlight\">Avatars</span></h1> "),_vm._ssrNode("<main class=\"main-container\">","</main>",[_c('Sidebar'),_vm._ssrNode(" "),_c('AvatarContainer')],2),_vm._ssrNode(" "),_c('Share'),_vm._ssrNode(" "),_c('Footer')],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=06b5c132&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=3a52bc1f&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
 //
@@ -893,7 +893,10 @@ var staticRenderFns = []
         content: "Hola SVG Avatars"
       }, {
         name: 'description',
-        content: "Free Open SVG Avatars"
+        content: "Free Open SVG Avatars Generator"
+      }, {
+        name: 'author',
+        content: "Mariana Beldi"
       }, {
         property: 'og:type',
         content: "website"
@@ -920,7 +923,7 @@ var staticRenderFns = []
         content: "Hola SVG Icons"
       }, {
         property: 'twitter:description',
-        content: "Free Open SVG Avatars"
+        content: "Free Open SVG Avatars Generator"
       }, {
         property: 'twitter:image',
         content: "/holasvg-avatars.gif"

@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/Users/mariana.beldi/sites/holasvg-avatars/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2fa567c8"
+    "chunkName": "pages/index"
   }
 ]
